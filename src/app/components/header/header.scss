@@ -1,0 +1,73 @@
+    @import "../../../styles.scss";
+    @import "../../../styles/variables";
+
+    .header-component {
+        background-color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        padding: 12px 48px 12px 48px;
+
+        &__logo {
+            &__img {
+                display: flex;
+                width: 250px;
+                height: auto;
+            }
+        }
+
+        &__navbar {
+            display: flex;
+            align-items: center;
+            gap: 64px;
+
+            button {
+                display: flex;
+                align-items: center;
+                background: $color-accent;
+                border: none;
+                border-radius: 8px;
+                padding: 16px 12px;
+                color: #fff;
+                font-weight: 600;
+
+                transition:
+                    transform 150ms ease,
+                    background-color 150ms ease;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.05);
+                    background-color: darken($color-accent, 5%);
+                }
+
+                &:active {
+                    transform: scale(0.98);
+
+                }
+            }
+
+
+            &__options {
+                display: flex;
+                gap: 40px;
+                padding: 12px;
+                color: $color-text;
+                font-size: $font-size-sm;
+                font-weight: $font-weight-medium;
+
+                a {
+                    &:hover {
+                        color: $color-primary;
+                        transform: translateY(-1px);
+                    }
+
+                    &:active {
+                        transform: scale(0.98);
+                    }
+                }
+            }
+        }
+    }
