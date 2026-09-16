@@ -1,0 +1,21 @@
+@import "../../../styles.scss";
+@import "../../../styles/variables";
+
+.app-diferential-component {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        font-weight: $font-weight-bold;
+        color: $color-text;
+        margin-bottom: 24px;
+        font-size: 2rem;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+}

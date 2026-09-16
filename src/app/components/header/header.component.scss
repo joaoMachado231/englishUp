@@ -1,49 +1,49 @@
-    @import "../../../styles.scss";
-    @import "../../../styles/variables";
+@import "../../../styles.scss";
+@import "../../../styles/variables";
 
-    .header-component {
-        background-color: $color-white;
+.header-component {
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 12px 24px;
+
+    &__logo {
+        &__img {
+            display: flex;
+            width: 250px;
+            height: auto;
+        }
+    }
+
+    &__navbar {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-        padding: 12px 48px 12px 48px;
+        gap: 64px;
 
-        &__logo {
-            &__img {
-                display: flex;
-                width: 250px;
-                height: auto;
-            }
-        }
 
-        &__navbar {
+
+
+        &__options {
             display: flex;
-            align-items: center;
-            gap: 64px;
+            gap: 40px;
+            padding: 12px;
+            color: $color-text;
+            font-size: $font-size-sm;
+            font-weight: $font-weight-medium;
 
+            a {
+                &:hover {
+                    color: $color-primary;
+                    transform: translateY(-1px);
+                }
 
-
-
-            &__options {
-                display: flex;
-                gap: 40px;
-                padding: 12px;
-                color: $color-text;
-                font-size: $font-size-sm;
-                font-weight: $font-weight-medium;
-
-                a {
-                    &:hover {
-                        color: $color-primary;
-                        transform: translateY(-1px);
-                    }
-
-                    &:active {
-                        transform: scale(0.98);
-                    }
+                &:active {
+                    transform: scale(0.98);
                 }
             }
         }
     }
+}

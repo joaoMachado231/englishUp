@@ -1,0 +1,9 @@
+<div class="app-diferential-component">
+    <h1 class="app-diferential-component__title">Por que escolher a EnglishUp?</h1>
+
+    <div class="app-diferential-component__cards">
+        @for (card of cards; track card.iconSrc) {
+        <app-card [iconSrc]="card.iconSrc" [title]="card.title" [description]="card.description"></app-card>
+        }
+    </div>
+</div>
