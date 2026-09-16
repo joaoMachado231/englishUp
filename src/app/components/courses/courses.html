@@ -1,0 +1,11 @@
+<div class="app-courses-component">
+    <h1 class="app-courses-component__title">Nossos Cursos</h1>
+    <p class="app-courses-component__description">Encontre o curso ideal para seu objetivo.</p>
+
+    <div class="app-courses-component__cards">
+        @for (card of cards; track card.iconSrc) {
+        <app-card [iconSrc]="card.iconSrc" [title]="card.title" [description]="card.description"
+            [hasShadow]="true"></app-card>
+        }
+    </div>
+</div>

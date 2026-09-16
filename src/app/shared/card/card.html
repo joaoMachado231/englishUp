@@ -1,4 +1,4 @@
-<div class="app-card">
+<div class="app-card" [class.shadow]="hasShadow">
     <img class="app-card__icon" [src]="iconSrc" alt="Card Icon">
     <p class="app-card__title">{{ title }}</p>
     <p class="app-card__description">{{ description }}</p>

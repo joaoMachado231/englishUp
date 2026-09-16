@@ -1,20 +1,25 @@
 @import "../../../styles.scss";
 @import "../../../styles/variables";
 
-.app-diferential-component {
+.app-courses-component {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 24px;
-    padding-top: 48px;
-    background-color: $color-white;
-    border-radius: 16px;
+    padding: 24px 48px;
+    background-color: $color-background;
 
     &__title {
         font-weight: $font-weight-bold;
         color: $color-text;
-        margin-bottom: 24px;
+        margin-bottom: 8px;
         font-size: 2rem;
+    }
+
+    &__description {
+        font-weight: $font-weight-semibold;
+        color: $color-text;
+        margin-bottom: 24px;
+        font-size: 1rem;
     }
 
     &__cards {
@@ -26,13 +31,13 @@
 }
 
 @media (max-width: 900px) {
-    .app-diferential-component__cards {
+    .app-courses-component__cards {
         grid-template-columns: repeat(2, minmax(0, 180px));
     }
 }
 
 @media (max-width: 480px) {
-    .app-diferential-component__cards {
+    .app-courses-component__cards {
         grid-template-columns: minmax(0, 180px);
     }
 }

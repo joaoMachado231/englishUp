@@ -16,4 +16,7 @@ export class Card {
 
   @Input()
   public description: string = '';
+
+  @Input()
+  public hasShadow: boolean = false;
 }
