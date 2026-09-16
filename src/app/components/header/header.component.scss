@@ -23,31 +23,7 @@
             align-items: center;
             gap: 64px;
 
-            button {
-                display: flex;
-                align-items: center;
-                background: $color-accent;
-                border: none;
-                border-radius: 8px;
-                padding: 16px 12px;
-                color: #fff;
-                font-weight: 600;
 
-                transition:
-                    transform 150ms ease,
-                    background-color 150ms ease;
-
-                &:hover {
-                    cursor: pointer;
-                    transform: scale(1.05);
-                    background-color: darken($color-accent, 5%);
-                }
-
-                &:active {
-                    transform: scale(0.98);
-
-                }
-            }
 
 
             &__options {
