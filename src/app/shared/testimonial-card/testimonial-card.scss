@@ -1,0 +1,44 @@
+@import "../../../styles.scss";
+@import "../../../styles/variables";
+
+.testimonial-card {
+    display: flex;
+    width: min(100%, 280px);
+    min-height: 170px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px;
+    border-radius: $radius-lg;
+    background-color: $color-white;
+    box-shadow: $shadow-md;
+    text-align: center;
+
+    &__rating {
+        display: flex;
+        gap: 3px;
+        margin-bottom: 14px;
+        color: #d9dde5;
+        font-size: 1.05rem;
+        line-height: 1;
+    }
+
+    &__star--filled {
+        color: #f4b400;
+    }
+
+    &__text {
+        margin: 0;
+        color: $color-text;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-medium;
+        line-height: 1.55;
+    }
+
+    &__author {
+        margin: 10px 0 0;
+        color: $color-text;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-bold;
+    }
+}

@@ -1,0 +1,20 @@
+<section class="app-testimonials-component" aria-labelledby="testimonials-title">
+    <h2 id="testimonials-title" class="app-testimonials-component__title">Quem aprende, recomenda</h2>
+    <p class="app-testimonials-component__description">Veja como a EnglishUp transforma a comunicação dos nossos alunos.
+    </p>
+
+    <div class="app-testimonials-component__cards" aria-live="polite">
+        @for (testimonial of visibleTestimonials(); track testimonial.author) {
+        <app-testimonial-card [rating]="testimonial.rating" [text]="testimonial.text" [author]="testimonial.author">
+        </app-testimonial-card>
+        }
+    </div>
+
+    <div class="app-testimonials-component__pagination" aria-label="Navegação dos depoimentos">
+        @for (page of pages(); track page) {
+        <button type="button" class="app-testimonials-component__dot"
+            [class.app-testimonials-component__dot--active]="currentPage() === page">
+        </button>
+        }
+    </div>
+</section>

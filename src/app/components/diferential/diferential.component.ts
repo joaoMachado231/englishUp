@@ -9,7 +9,6 @@ import { Card } from '../../shared/card/card';
   templateUrl: './diferential.component.html',
 })
 export class DiferentialComponent {
-
   public cards: CardModel[] = [
     {
       iconSrc: 'assets/icons/graduation-icon.svg',
@@ -32,5 +31,4 @@ export class DiferentialComponent {
       description: 'Alunos que evoluem de verdade.'
     },
   ]
-
 }

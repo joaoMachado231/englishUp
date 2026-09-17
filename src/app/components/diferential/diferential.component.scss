@@ -19,7 +19,7 @@
 
     &__cards {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 250px));
+        grid-template-columns: repeat(4, 1fr);
         justify-content: center;
         gap: 24px;
     }

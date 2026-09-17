@@ -1,0 +1,10 @@
+<article class="testimonial-card">
+    <div class="testimonial-card__rating" [attr.aria-label]="rating + ' de 5 estrelas'" role="img">
+        @for (star of stars; track star) {
+        <span [class.testimonial-card__star--filled]="star <= rating" aria-hidden="true">&#9733;</span>
+        }
+    </div>
+
+    <blockquote class="testimonial-card__text">{{ text }}</blockquote>
+    <p class="testimonial-card__author">&#8212; {{ author }}</p>
+</article>
