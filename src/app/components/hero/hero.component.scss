@@ -1,5 +1,4 @@
-@import "../../../styles.scss";
-@import "../../../styles/variables";
+@use "../../../styles/variables" as *;
 
 .app-hero {
     margin-top: 8px;

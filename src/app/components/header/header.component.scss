@@ -1,49 +1,48 @@
-@import "../../../styles.scss";
-@import "../../../styles/variables";
+    @use "../../../styles/variables" as *;
 
-.header-component {
-    background-color: $color-white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    padding: 12px 24px;
-
-    &__logo {
-        &__img {
-            display: flex;
-            width: 250px;
-            height: auto;
-        }
-    }
-
-    &__navbar {
+    .header-component {
+        background-color: $color-white;
         display: flex;
         align-items: center;
-        gap: 64px;
+        justify-content: space-between;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        padding: 12px 24px;
 
+        &__logo {
+            &__img {
+                display: flex;
+                width: 250px;
+                height: auto;
+            }
+        }
 
-
-
-        &__options {
+        &__navbar {
             display: flex;
-            gap: 40px;
-            padding: 12px;
-            color: $color-text;
-            font-size: $font-size-sm;
-            font-weight: $font-weight-medium;
+            align-items: center;
+            gap: 64px;
 
-            a {
-                &:hover {
-                    color: $color-primary;
-                    transform: translateY(-1px);
-                }
 
-                &:active {
-                    transform: scale(0.98);
+
+
+            &__options {
+                display: flex;
+                gap: 40px;
+                padding: 12px;
+                color: $color-text;
+                font-size: $font-size-sm;
+                font-weight: $font-weight-medium;
+
+                a {
+                    &:hover {
+                        color: $color-primary;
+                        transform: translateY(-1px);
+                    }
+
+                    &:active {
+                        transform: scale(0.98);
+                    }
                 }
             }
         }
     }
-}
