@@ -1,0 +1,64 @@
+@use "../../../styles/variables" as *;
+
+.app-how-it-works-component {
+    display: flex;
+    padding: 48px;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-background;
+
+    &--compact {
+        padding: 24px 48px;
+    }
+
+    &--white {
+        margin-bottom: 24px;
+        background-color: $color-white;
+        border-radius: $radius-xl;
+    }
+
+    &__title {
+        margin: 0 0 8px;
+        color: $color-text;
+        font-size: $font-size-3xl;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        width: 100%;
+        max-width: 1200px;
+
+        :last-child {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .card-section__cards {
+        grid-template-columns: repeat(2, minmax(0, 180px));
+    }
+}
+
+@media (max-width: 480px) {
+    .card-section {
+        padding: 32px 16px;
+
+        &--compact {
+            padding: 24px 16px;
+        }
+
+        &__title {
+            font-size: $font-size-2xl;
+        }
+
+        &__cards {
+            grid-template-columns: minmax(0, 180px);
+        }
+    }
+}

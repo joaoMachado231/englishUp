@@ -1,0 +1,11 @@
+<section class="app-how-it-works-component">
+    <h2 id="app-how-it-works-component-title" class="app-how-it-works-component__title">Como funciona?</h2>
+
+    <div class="app-how-it-works-component__cards">
+        @for (card of howItWorksCards; track card.iconSrc) {
+        <app-card [iconSrc]="card.iconSrc" [title]="card.title" [description]="card.description"
+            [hasShadow]="true"></app-card>
+        <img src="assets/icons/icone-seta.svg" alt="">
+        }
+    </div>
+</section>

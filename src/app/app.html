@@ -1,5 +1,7 @@
 <app-header></app-header>
 <app-hero></app-hero>
-<app-diferential-component></app-diferential-component>
-<app-courses></app-courses>
+<app-card-section title="Por que escolher a EnglishUp?" [cards]="differentialCards" surface="white"></app-card-section>
+<app-card-section title="Nossos Cursos" description="Encontre o curso ideal para seu objetivo." [cards]="courseCards"
+    [compact]="true" [hasShadow]="true"></app-card-section>
 <app-testimonials></app-testimonials>
+<app-how-it-works></app-how-it-works>

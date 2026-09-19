@@ -1,0 +1,15 @@
+<section class="card-section" [class.card-section--compact]="compact" [class.card-section--white]="surface === 'white'"
+    aria-labelledby="card-section-title">
+    <h2 id="card-section-title" class="card-section__title">{{ title }}</h2>
+
+    @if (description) {
+    <p class="card-section__description">{{ description }}</p>
+    }
+
+    <div class="card-section__cards">
+        @for (card of cards; track card.iconSrc) {
+        <app-card [iconSrc]="card.iconSrc" [title]="card.title" [description]="card.description"
+            [hasShadow]="hasShadow"></app-card>
+        }
+    </div>
+</section>

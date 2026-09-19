@@ -1,5 +1,4 @@
-@import "../../../styles.scss";
-@import "../../../styles/variables";
+@use "../../../styles/variables" as *;
 
 .testimonial-card {
     display: flex;

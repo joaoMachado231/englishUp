@@ -13,7 +13,10 @@
     <div class="app-testimonials-component__pagination" aria-label="Navegação dos depoimentos">
         @for (page of pages(); track page) {
         <button type="button" class="app-testimonials-component__dot"
-            [class.app-testimonials-component__dot--active]="currentPage() === page">
+            [class.app-testimonials-component__dot--active]="currentPage() === page"
+            [attr.aria-label]="'Ir para a página ' + (page + 1)"
+            [attr.aria-current]="currentPage() === page ? 'page' : null"
+            (click)="selectPage(page)">
         </button>
         }
     </div>
