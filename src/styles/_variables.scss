@@ -1,6 +1,20 @@
+@use 'sass:math';
+
 // ============================================
 // EnglishUp - Design System
 // ============================================
+
+// --------------------------------------------
+// Unit Conversion
+// --------------------------------------------
+
+@function px-to-rem($px, $base-font-size: 16px) {
+    @if math.unit($px) !='px' or math.unit($base-font-size) !='px' {
+        @error 'px-to-rem() expects values in px.';
+    }
+
+    @return math.div($px, $base-font-size) * 1rem;
+}
 
 // --------------------------------------------
 // Colors
@@ -37,15 +51,15 @@ $font-weight-black: 900;
 // Font Sizes
 // --------------------------------------------
 
-$font-size-xs: 0.75rem; // 12px
-$font-size-sm: 0.875rem; // 14px
-$font-size-md: 1rem; // 16px
-$font-size-lg: 1.125rem; // 18px
-$font-size-xl: 1.25rem; // 20px
-$font-size-2xl: 1.5rem; // 24px
-$font-size-3xl: 2rem; // 32px
-$font-size-4xl: 2.5rem; // 40px
-$font-size-5xl: 3rem; // 48px
+$font-size-xs: px-to-rem(12px);
+$font-size-sm: px-to-rem(14px);
+$font-size-md: px-to-rem(16px);
+$font-size-lg: px-to-rem(18px);
+$font-size-xl: px-to-rem(20px);
+$font-size-2xl: px-to-rem(24px);
+$font-size-3xl: px-to-rem(32px);
+$font-size-4xl: px-to-rem(40px);
+$font-size-5xl: px-to-rem(48px);
 
 
 // --------------------------------------------
