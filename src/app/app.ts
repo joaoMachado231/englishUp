@@ -2,12 +2,13 @@ import { Component, signal } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { HowItWorks } from './components/how-it-works/how-it-works';
+import { Faq } from './components/faq/faq';
 import { Testimonials } from './components/testimonials/testimonials';
 import { CardModel } from './models/CardModel';
 import { CardSection } from './shared/card-section/card-section';
 
 @Component({
-  imports: [HeaderComponent, HeroComponent, Testimonials, CardSection, HowItWorks],
+  imports: [HeaderComponent, HeroComponent, Testimonials, CardSection, HowItWorks, Faq],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',

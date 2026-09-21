@@ -1,0 +1,17 @@
+<section class="app-faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="app-faq__title">Perguntas frequentes</h2>
+
+    <div class="app-faq__list">
+        @for( item of faqItems; track item.question; let i = $index;) {
+        <div class="app-faq__list__item" (click)="openAnswer(i)">
+            <div class="app-faq__list__item__question">
+                <span class="app-faq__list__item__question-text">{{ item.question }}</span>
+                <img src="assets/icons/chevron-icon.svg" [class.open]="isAnswerOpen(i)" alt="icone chevron">
+            </div>
+            <div class="app-faq__list__item__answer" [class.open]="isAnswerOpen(i)">
+                <p class="app-faq__list__item__answer-text">{{ item.answer }}</p>
+            </div>
+        </div>
+        }
+    </div>
+</section>
