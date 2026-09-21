@@ -1,0 +1,106 @@
+@use "../../../styles/variables" as *;
+
+.footer-component {
+    padding: 48px 24px 28px;
+    background-color: $color-white;
+    color: $color-text;
+    margin-top: 48px;
+
+    &__content {
+        display: grid;
+        grid-template-columns: minmax(220px, 1.5fr) repeat(2, minmax(150px, 1fr)) minmax(220px, 1.2fr);
+        gap: 48px;
+        max-width: $container-max-width;
+        margin: 0 auto;
+    }
+
+    &__brand {
+        &-link {
+            display: inline-block;
+        }
+
+        img {
+            display: block;
+            width: 160px;
+            height: auto;
+        }
+
+        p {
+            margin: 16px 0 20px;
+            font-size: $font-size-sm;
+            line-height: 1.5;
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: 16px;
+
+        span {
+            display: grid;
+            width: 28px;
+            height: 28px;
+            place-items: center;
+            border: 1px solid rgba($color-primary, 0.2);
+            border-radius: 50%;
+            color: $color-primary;
+            font-size: $font-size-sm;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: $font-size-xs;
+
+        h2 {
+            margin: 0 0 8px;
+            color: $color-text;
+            font-size: $font-size-sm;
+            font-weight: $font-weight-bold;
+        }
+
+        span {
+            color: $color-text;
+            line-height: 1.4;
+            text-decoration: none;
+        }
+    }
+
+    &__contact {
+
+        span {
+            white-space: nowrap;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-component {
+        padding: 40px 20px 24px;
+
+        &__content {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 32px 24px;
+        }
+
+        &__brand {
+            grid-column: 1 / -1;
+        }
+
+        &__contact {
+
+            span {
+                white-space: normal;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-component__content {
+        grid-template-columns: 1fr;
+    }
+}
