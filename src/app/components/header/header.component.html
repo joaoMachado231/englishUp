@@ -3,15 +3,22 @@
         <img class="header-component__logo__img" src="assets/images/logoEnglishUp.png" alt="Logo englishUp">
     </div>
 
-    <div class="header-component__navbar">
-        <div class="header-component__navbar__options">
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#cursos">Cursos</a>
-            <a href="#depoimentos">Depoimentos</a>
-            <a href="#como-funciona">Como funciona?</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contato">Contato</a>
+    <button class="header-component__menu-toggle" type="button" [attr.aria-expanded]="isMenuOpen"
+        aria-controls="main-navigation" aria-label="Abrir menu" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="header-component__navbar" [class.header-component__navbar--open]="isMenuOpen">
+        <div class="header-component__navbar__options" id="main-navigation">
+            <a href="#inicio" (click)="closeMenu()">Início</a>
+            <a href="#sobre" (click)="closeMenu()">Sobre</a>
+            <a href="#cursos" (click)="closeMenu()">Cursos</a>
+            <a href="#depoimentos" (click)="closeMenu()">Depoimentos</a>
+            <a href="#como-funciona" (click)="closeMenu()">Como funciona?</a>
+            <a href="#faq" (click)="closeMenu()">FAQ</a>
+            <a href="#contato" (click)="closeMenu()">Contato</a>
         </div>
 
         <app-wpp-button buttonLAbbel="Agende sua aula"></app-wpp-button>

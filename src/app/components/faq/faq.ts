@@ -44,6 +44,10 @@ export class Faq {
     this.openIndex = this.openIndex === index ? null : index;
   }
 
+  toggleFaq(index: number): void {
+    this.openAnswer(index);
+  }
+
   isAnswerOpen(index: number): boolean {
     return this.openIndex === index;
   }

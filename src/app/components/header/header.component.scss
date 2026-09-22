@@ -15,22 +15,40 @@
         &__logo {
             &__img {
                 display: flex;
-                width: 250px;
+                width: clamp(150px, 18vw, 250px);
                 height: auto;
+            }
+        }
+
+        &__menu-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            padding: 10px;
+            border: 0;
+            border-radius: $radius-sm;
+            background: transparent;
+            cursor: pointer;
+
+            span {
+                display: block;
+                height: 2px;
+                margin: 5px 0;
+                background: $color-primary;
             }
         }
 
         &__navbar {
             display: flex;
             align-items: center;
-            gap: 64px;
+            gap: clamp(16px, 4vw, 64px);
 
 
 
 
             &__options {
                 display: flex;
-                gap: 40px;
+                gap: clamp(12px, 2.5vw, 40px);
                 padding: 12px;
                 color: $color-text;
                 font-size: $font-size-sm;
@@ -45,6 +63,63 @@
                     &:active {
                         transform: scale(0.98);
                     }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1050px) {
+        .header-component {
+            &__navbar {
+                gap: 16px;
+
+                &__options {
+                    gap: 16px;
+                    padding: 8px;
+                    font-size: $font-size-xs;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        .header-component {
+            position: relative;
+            padding: 10px 16px;
+
+            &__menu-toggle {
+                display: block;
+            }
+
+            &__navbar {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                left: 0;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 16px;
+                padding: 16px;
+                background: $color-white;
+                box-shadow: $shadow-md;
+
+                &--open {
+                    display: flex;
+                }
+
+                &__options {
+                    flex-direction: column;
+                    gap: 0;
+                    padding: 0;
+
+                    a {
+                        padding: 10px 4px;
+                    }
+                }
+
+                app-wpp-button {
+                    align-self: stretch;
                 }
             }
         }

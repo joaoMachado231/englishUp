@@ -24,7 +24,8 @@
 
     &__cards {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 280px));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-width: 900px;
         justify-content: center;
         gap: 24px;
         width: 100%;
@@ -56,7 +57,7 @@
         padding: 40px 24px;
 
         &__cards {
-            grid-template-columns: repeat(2, minmax(0, 280px));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
     }
 }
@@ -71,7 +72,7 @@
         }
 
         &__cards {
-            grid-template-columns: minmax(0, 280px);
+            grid-template-columns: minmax(0, 1fr);
         }
     }
 }

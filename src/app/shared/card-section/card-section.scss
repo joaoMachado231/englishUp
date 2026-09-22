@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 48px;
+    padding: clamp(32px, 5vw, 48px) clamp(16px, 5vw, 48px);
     background-color: $color-background;
 
     &--compact {
@@ -36,17 +36,11 @@
 
     &__cards {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
         justify-content: center;
         gap: 24px;
         width: 100%;
         max-width: 1200px;
-    }
-}
-
-@media (max-width: 900px) {
-    .card-section__cards {
-        grid-template-columns: repeat(2, minmax(0, 180px));
     }
 }
 
@@ -63,7 +57,7 @@
         }
 
         &__cards {
-            grid-template-columns: minmax(0, 180px);
+            grid-template-columns: minmax(0, 1fr);
         }
     }
 }

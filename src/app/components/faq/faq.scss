@@ -1,6 +1,8 @@
     @use "../../../styles/variables" as *;
 
     .app-faq {
+        padding: clamp(32px, 5vw, 48px) clamp(16px, 5vw, 48px);
+
         &__title {
             margin: 0 0 8px;
             color: $color-text;
@@ -24,7 +26,7 @@
                 padding: 16px;
                 border: 1px solid $color-secondary;
                 border-radius: 8px;
-                width: 80%;
+                width: 100%;
                 cursor: pointer;
 
                 &__answer {
@@ -41,7 +43,7 @@
                     }
 
                     &.open {
-                        max-height: 200px;
+                        max-height: 1000px;
                         margin-top: 8px;
                         opacity: 1;
                     }
@@ -66,5 +68,12 @@
                     }
                 }
             }
+        }
+    }
+
+    @media (max-width: 700px) {
+        .app-faq__list {
+            grid-template-columns: 1fr;
+            gap: 16px;
         }
     }
