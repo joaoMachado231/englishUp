@@ -14,7 +14,11 @@ export class WppButton {
 
   public faWpp = faWhatsapp
 
-  openWhatsApp() {
-    console.log('Opening WhatsApp...');
+  openWhatsApp(): void {
+    const phoneNumber = '5519997614074';
+    const message = 'Olá! Vi sua landing page de portfólio e gostaria de conversar sobre a criação de uma página personalizada para o meu negócio. Poderia me enviar mais informações e um orçamento?';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   }
 }

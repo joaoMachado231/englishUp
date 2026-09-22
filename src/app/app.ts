@@ -4,12 +4,13 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { HowItWorks } from './components/how-it-works/how-it-works';
+import { PortfolioModalComponent } from './components/portfolio-modal/portfolio-modal.component';
 import { Testimonials } from './components/testimonials/testimonials';
 import { CardModel } from './models/CardModel';
 import { CardSection } from './shared/card-section/card-section';
 
 @Component({
-  imports: [HeaderComponent, HeroComponent, Testimonials, CardSection, HowItWorks, Faq, FooterComponent],
+  imports: [HeaderComponent, HeroComponent, Testimonials, CardSection, HowItWorks, Faq, FooterComponent, PortfolioModalComponent],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',

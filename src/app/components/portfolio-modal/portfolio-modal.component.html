@@ -1,0 +1,58 @@
+@if (isOpen()) {
+<div class="portfolio-modal" role="dialog" aria-modal="true" aria-labelledby="portfolio-modal-title"
+    (click)="closeModal()">
+    <article class="portfolio-modal__content" (click)="$event.stopPropagation()">
+        <button class="portfolio-modal__close" type="button" aria-label="Fechar apresentação"
+            (click)="closeModal()">&times;</button>
+
+        <p class="portfolio-modal__eyebrow">Projeto de portfólio</p>
+        <h2 id="portfolio-modal-title">Uma landing page criada para apresentar possibilidades.</h2>
+        <p class="portfolio-modal__description">
+            Este projeto faz parte de um portfólio de landing pages desenvolvido para explorar interfaces,
+            experiências digitais e soluções front-end.
+        </p>
+
+        <div class="portfolio-modal__offer">
+            <h3>Quer uma landing page para o seu negócio?</h3>
+            <p>
+                Entre em contato para criar uma página sob medida para apresentar sua marca, destacar seus serviços
+                e transformar visitantes em novos clientes.
+            </p>
+            <ul>
+                <li>Design alinhado à identidade da sua empresa</li>
+                <li>Experiência responsiva para celular e desktop</li>
+                <li>Estrutura pensada para conversão e contato</li>
+            </ul>
+        </div>
+
+        <div class="portfolio-modal__developer">
+            <span class="portfolio-modal__developer-label">Desenvolvedor</span>
+            <span class="portfolio-modal__developer-label">Fale comigo para solicitar um orçamento</span>
+            <strong>João Pedro Bruno Machado</strong>
+            <span>+55 (19) 99761-4074</span>
+            <span>joao.machado0601@gmail.com</span>
+        </div>
+
+        <div class="portfolio-modal__links" aria-label="Perfis profissionais">
+            <a href="https://github.com/joaoMachado231" target="_blank" rel="noopener noreferrer">
+                <fa-icon [icon]="faGithub"></fa-icon>
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-bruno-machado-2bb9051bb/" target="_blank"
+                rel="noopener noreferrer">
+                <fa-icon [icon]="faLinkedinIn"></fa-icon>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+
+        <div class="portfolio-modal__contact-action">
+            <app-wpp-button buttonLAbbel="Solicitar orçamento pelo WhatsApp"></app-wpp-button>
+        </div>
+    </article>
+</div>
+}
+
+<button class="portfolio-modal__trigger" type="button" aria-label="Abrir informações sobre o projeto"
+    (click)="openModal()">
+    <fa-icon [icon]="faGithub"></fa-icon>
+</button>
